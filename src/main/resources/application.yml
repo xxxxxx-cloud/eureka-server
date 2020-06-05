@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: EUREKA-SERVER
+eureka:
+  environment: dev #指定eureka环境
+  datacenter: xxxxx #指定数据中心
+  instance:
+    hostname: eureka-peer1
+    preferIpAddress: true #将自己的IP注册到Eureka Server。若不配置或设置为false，表示注册微服务所在操作系统的hostname到Eureka Server）
+  client:
+    registerWithEureka: false #服务注册 false 自己不注册到服务中心
+    fetchRegistry: false #服务发现  表示自己端就是注册中心 我的职责就是维护服务实例 false  自己不获取注册信息
+    serviceUrl:
+      defaultZone: http://127.0.0.1:20001/eureka/
+  server:
+    evictionIntervalTimerInMs: 5000 #驱逐下线时间
+    enableSelfPreservation: true #自我保护机制 true 开  false 关
+server:
+  port: 20001
