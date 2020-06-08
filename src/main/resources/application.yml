@@ -2,18 +2,18 @@ spring:
   application:
     name: EUREKA-SERVER
 eureka:
-  environment: dev #Ö¸¶¨eureka»·¾³
-  datacenter: xxxxx #Ö¸¶¨Êı¾İÖĞĞÄ
+  environment: dev #æŒ‡å®šeurekaç¯å¢ƒ
+  datacenter: xxxxx #æŒ‡å®šæ•°æ®ä¸­å¿ƒ
   instance:
     hostname: eureka-peer1
-    preferIpAddress: true #½«×Ô¼ºµÄIP×¢²áµ½Eureka Server¡£Èô²»ÅäÖÃ»òÉèÖÃÎªfalse£¬±íÊ¾×¢²áÎ¢·şÎñËùÔÚ²Ù×÷ÏµÍ³µÄhostnameµ½Eureka Server£©
+    preferIpAddress: true #å°†è‡ªå·±çš„IPæ³¨å†Œåˆ°Eureka Serverã€‚è‹¥ä¸é…ç½®æˆ–è®¾ç½®ä¸ºfalseï¼Œè¡¨ç¤ºæ³¨å†Œå¾®æœåŠ¡æ‰€åœ¨æ“ä½œç³»ç»Ÿçš„hostnameåˆ°Eureka Serverï¼‰
   client:
-    registerWithEureka: false #·şÎñ×¢²á false ×Ô¼º²»×¢²áµ½·şÎñÖĞĞÄ
-    fetchRegistry: false #·şÎñ·¢ÏÖ  ±íÊ¾×Ô¼º¶Ë¾ÍÊÇ×¢²áÖĞĞÄ ÎÒµÄÖ°Ôğ¾ÍÊÇÎ¬»¤·şÎñÊµÀı false  ×Ô¼º²»»ñÈ¡×¢²áĞÅÏ¢
+    registerWithEureka: false #æœåŠ¡æ³¨å†Œ false è‡ªå·±ä¸æ³¨å†Œåˆ°æœåŠ¡ä¸­å¿ƒ
+    fetchRegistry: false #æœåŠ¡å‘ç°  è¡¨ç¤ºè‡ªå·±ç«¯å°±æ˜¯æ³¨å†Œä¸­å¿ƒ æˆ‘çš„èŒè´£å°±æ˜¯ç»´æŠ¤æœåŠ¡å®ä¾‹ false  è‡ªå·±ä¸è·å–æ³¨å†Œä¿¡æ¯
     serviceUrl:
       defaultZone: http://127.0.0.1:20001/eureka/
   server:
-    evictionIntervalTimerInMs: 5000 #ÇıÖğÏÂÏßÊ±¼ä
-    enableSelfPreservation: true #×ÔÎÒ±£»¤»úÖÆ true ¿ª  false ¹Ø
+    evictionIntervalTimerInMs: 5000 #é©±é€ä¸‹çº¿æ—¶é—´
+    enableSelfPreservation: true #è‡ªæˆ‘ä¿æŠ¤æœºåˆ¶ true å¼€  false å…³
 server:
   port: 20001
